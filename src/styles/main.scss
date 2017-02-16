@@ -4,16 +4,12 @@ body {
 	text-align: center;
 }
 
-img {width: 100%; display: block; opacity: .95;}
+img {width: 100%; display: block;}
 
 #app-container {
-	background-image: url('https://jamesluxford.files.wordpress.com/2014/11/bbc-radio-logo_new.jpg');
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: left top;
-	background-attachment: fixed;
-	height: auto;
 	padding-top: 150px;
+	background: linear-gradient(90deg, #2e8f92, #f49c6f);
+	height: auto;
 }
 
 .column-container > * {
@@ -33,48 +29,74 @@ img {width: 100%; display: block; opacity: .95;}
 	width: 100%;
 	font-size: 30px;
 	font-weight: 500;
-	background-color: black;
+	background-color: #191919;
 	color: white;
 	padding: 15px;
-	border-bottom: 2px solid white;
+	margin-bottom: 5px;
 }
 
 .head img {width: 50%;}
 
 .routes {
-	width: 33%;
+	width: 22%;
 	font-size: medium;
-	background-color: black;
+	background: rgba(25, 25, 25, .8);
 	padding: 10px 0;
+	border-radius: 25px;
+	margin: 0 12px;
+	border: 2px solid rgba(256, 256, 256, .8);
 }
 
-.routes a {
+.routes:hover {background-color: grey;}
+
+.routes a, .head a {
 	text-decoration: none;
 	color: white;
 }
 
 .main-content {
-	width: 80%;
+	width: 85%;
 	margin: 0 auto;
+}
+
+.introducing {
+	width: 60%;
+	color: white;
+	font-size: 30px;
+}
+
+.introducing h1 {
+	margin-top: 0;
+	margin-bottom: 15px;
+	font-weight: 200;
 }
 
 .playlist {
 	font-size: medium;
-	width: 45%;
-	margin: 0 20px;
+	width: 25%;
+	margin: 15px 20px;
+	position: relative;
 }
 
 .intros {
-	width: 80%;
+	width: 60%;
 	font-size: medium;
+	position: relative;
+	margin-bottom: 25px;
 }
 
 .titles {
-	width: 50%;
-	margin: 0 auto;
-	background-color: black;
+	width: 100%;
+	background: rgba(0, 0, 0, .6);
 	color: white;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 40%;
+	margin: auto;
 }
-.default {font-size: 50px;}
 
-.border {border: 1px solid black;}
+.default {
+	font-size: 50px;
+	height: 550px;
+}

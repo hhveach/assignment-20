@@ -18,7 +18,7 @@ const AppRouter = Backbone.Router.extend({
   },
 
   homePage: function(){
-    let radioOneCollection = new bbcRadioCollection();
+    let radioOneCollection = new bbcRadioCollection('1');
       radioOneCollection.fetch().then(function(serverRes){
         let results = serverRes.playlist.introducing;
           insert.innerHTML = homeIntroducing(results);
@@ -26,15 +26,19 @@ const AppRouter = Backbone.Router.extend({
   },
 
   radioOne: function(){
-    let radioOneCollection = new bbcRadioCollection();
+    let radioOneCollection = new bbcRadioCollection('1');
       radioOneCollection.fetch().then(function(serverRes){
-        let results = serverRes.playlist.a;
-          insert.innerHTML = playlist(results);
+        let resultsOne = serverRes.playlist.a;
+        // let resultsTwo = serverRes.playlist.b;
+        // let resultsThree = serverRes.playlist.c;
+          insert.innerHTML = playlist(resultsOne);
+          // insert.innerHTML += playlist(resultsTwo);
+          // insert.innerHTML += playlist(resultsThree);
     });
   },
 
   radioTwo: function(){
-    let radioOneCollection = new bbcRadioCollection();
+    let radioOneCollection = new bbcRadioCollection('2');
       radioOneCollection.fetch().then(function(serverRes){
         let results = serverRes.playlist.a;
           insert.innerHTML = playlist(results);
@@ -42,7 +46,7 @@ const AppRouter = Backbone.Router.extend({
   },
 
   errorPage: function(){
-    insert.innerHTML = `<h2 class="default">Hey, Stop It</h2>`;
+    insert.innerHTML = `<h2 class="default">Oops! This page does not exist.</h2>`;
   }
 
 })

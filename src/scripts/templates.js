@@ -1,10 +1,11 @@
 export const homeIntroducing = function(obj){
   let objContent = obj.map(function(listEl){
-    return `<div class="intros">
+    return `<div class="introducing"><h1>Introducing:</h1></div>
+            <div class="intros">
             <img src="${listEl.image}"/>
             <div class="titles">
             <h1>${listEl.artist}</h1>
-            <h6>${listEl.title}</h6>
+            <h6>'${listEl.title}'</h6>
             </div>
             </div>`
   }).join('');
@@ -17,7 +18,7 @@ export const playlist = function(obj){
             <img class="border" src="${listEl.image}"/>
             <div class="titles">
             <h3>${listEl.artist}</h3>
-            <h6>${listEl.title}</h6>
+            <h6>'${listEl.title}'</h6>
             </div>
             </div>`
   }).join('');
